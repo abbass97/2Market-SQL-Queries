@@ -81,6 +81,7 @@ FROM public.marketing_data m
 GROUP BY "country"
 ORDER BY "total_spend" DESC;
 ```
+![Chart 1](https://github.com/abbass97/2Market-SQL-Queries/blob/main/total_spend_per_country.png)
 
 ### Query 3: Total spend per product per country
 
@@ -96,6 +97,7 @@ FROM public.marketing_data m
 GROUP BY "country"
 ORDER BY "country" DESC;
 ```
+![Chart 1](https://github.com/abbass97/2Market-SQL-Queries/blob/main/total_spend_pp_country.png)
 
 ### Query 4: Most popular products in each country (using ranking)
 
@@ -122,6 +124,8 @@ SELECT
     RANK() OVER (ORDER BY total_commodities_sales DESC) AS rank_commodities
 FROM CTE;
 ```
+![Chart 1](https://github.com/abbass97/2Market-SQL-Queries/blob/main/popular_product_country.png)
+
 
 ### Query 5: Most popular products by marital status
 
@@ -136,6 +140,7 @@ SUM(m."comm_sale") AS total_commodities_sales
 FROM public.marketing_data m
 GROUP BY "marital_status";
 ```
+![Chart 1](https://github.com/abbass97/2Market-SQL-Queries/blob/main/popular_product_marital_status.png)
 
 ##  Interpretation
 
